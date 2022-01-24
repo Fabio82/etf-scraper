@@ -14,12 +14,15 @@ headers = {
 
 phrases = []
 
-with open('complete_links.txt') as file:
+with open('links.txt') as file:
     for idx, line in enumerate(file):
         req = requests.get(line)
         
-        soup = BeautifulSoup(req.content, 'html.parser')
+        soup = BeautifulSoup(req.text, 'lxml')
+
         elements = soup.find_all('td')
+
+        
 
         words = []
         words.append(line)
