@@ -1,4 +1,4 @@
-# this open the links file and put informations in a excel file with panda
+# this opens the links file and puts informations in an excel file with panda
 import requests
 from bs4 import BeautifulSoup
 import re
@@ -22,10 +22,8 @@ with open('links.txt') as file:
 
         elements = soup.find_all('td')
 
-        
-
         words = []
-        words.append(line)
+        words.append(re.sub('\n+$', '',line))
         for element in elements:
             element = re.sub('\t+', '', element.get_text())
             element = re.sub(' +', ' ', element)

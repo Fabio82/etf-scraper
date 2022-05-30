@@ -1,4 +1,4 @@
-# This create the list of links to info pages with selenium
+# This creates the list of links to info pages with selenium
 import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
@@ -33,7 +33,7 @@ while successiva:
     for result in results:
         link = result.get_attribute('href')
         out_file.write(f'{link}\n')
-        #data.append(link)
+        data.append(link)
     
     print(data)
     print("---------------------------------")
