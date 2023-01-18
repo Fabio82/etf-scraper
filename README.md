@@ -7,8 +7,8 @@
 OS X & Linux:
 
 ```sh
-git clone <repo-name>
-cd <repo-name>
+git clone https://github.com/Fabio82/etf-scraper.git
+cd etf-scraper
 pipenv sync
 
 ```
